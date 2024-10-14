@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -129,11 +128,11 @@ fun TaskInputScreen(navController: NavHostController, viewModel: TodoViewModel) 
 
 @Composable
 fun TodoItem(item: TodoData, onDelete: () -> Unit) {
-    Row {
+    Row(modifier = Modifier.fillMaxWidth()) {
         Column(
             modifier = Modifier
                 .padding(8.dp)
-                .width(300.dp)
+                .weight(1f)
                 .clip(RoundedCornerShape(14.dp))
                 .background(Color.LightGray)
                 .padding(12.dp)
