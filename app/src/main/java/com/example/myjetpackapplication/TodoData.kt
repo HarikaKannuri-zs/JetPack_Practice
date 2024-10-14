@@ -7,5 +7,6 @@ import androidx.room.PrimaryKey
 data class TodoData(
     @PrimaryKey(autoGenerate = true)
     var id : Int = 0,
-    var task: String
+    var taskTitle: String,
+    var taskDescription: String
 )

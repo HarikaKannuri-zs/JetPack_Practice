@@ -15,4 +15,7 @@ interface TodoDao {
 
     @Insert
     fun addTask(todoData: TodoData)
+
+    @Query("DELETE FROM TodoData where id = :id")
+    fun deleteTask(id : Int)
 }
